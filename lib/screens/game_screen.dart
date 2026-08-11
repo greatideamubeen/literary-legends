@@ -337,13 +337,7 @@ Color _getDifficultyColor(dynamic diff) {
 
   return Colors.blueGrey;
 }
-    switch (diff) {
-      case Difficulty.easy: return Colors.green;
-      case Difficulty.medium: return Colors.orange;
-      case Difficulty.hard: return Colors.red;
-    }
-  }
-
+    
   void _handleAnswer(int index) {
     final provider = context.read<GameProvider>();
     provider.answerQuestion(index);
