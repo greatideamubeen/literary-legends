@@ -128,7 +128,7 @@ class _GameScreenState extends State<GameScreen> with TickerProviderStateMixin {
                       color: Colors.brown.shade600,
                     ),
                   ),
-                  if (provider.currentMode == GameMode.speedRound)
+                   if (provider.currentMode.toString().contains('speedRound'))
                     _buildTimer(provider.timeLeft),
                 ],
               ),
@@ -208,9 +208,9 @@ class _GameScreenState extends State<GameScreen> with TickerProviderStateMixin {
                         height: 1.5,
                         color: Colors.brown.shade900,
                         fontFamily: 'Georgia',
-                        fontStyle: question.mode == GameMode.quoteChallenge 
-                            ? FontStyle.italic 
-                            : FontStyle.normal,
+                        fontStyle: question.mode.toString().contains('quoteChallenge')
+                             ? FontStyle.italic
+                             : FontStyle.normal,
                       ),
                     ),
                   ],
