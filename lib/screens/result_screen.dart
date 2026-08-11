@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../providers/game_provider.dart';
 import 'home_screen.dart';
 import 'leaderboard_screen.dart';
+import 'game_screen.dart';
 
 class ResultScreen extends StatefulWidget {
   const ResultScreen({super.key});
@@ -280,7 +281,7 @@ class _ResultScreenState extends State<ResultScreen> {
     } else if (percentage >= 70) {
       return (
         'Well Read!',
-        'Impressive! You clearly spend quality time with books. A few more pages and you'll be unstoppable.',
+        "Impressive! You clearly spend quality time with books. A few more pages and you'll be unstoppable.",
         '📖'
       );
     } else if (percentage >= 50) {
