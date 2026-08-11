@@ -1,0 +1,15 @@
+Literary Legends — Project Fix Audit
+
+Applied:
+- Added the missing provider dependency (if it was absent).
+
+Recommended next commands on a machine with Flutter installed:
+  flutter clean
+  flutter pub get
+  flutter analyze
+  flutter run
+
+Note:
+This environment does not have the Flutter SDK, so a real Flutter compilation/analyze
+could not be executed here. Existing dependencies were not removed automatically,
+because unused packages may be intended for upcoming features.
