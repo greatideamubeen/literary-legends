@@ -303,16 +303,40 @@ class _GameScreenState extends State<GameScreen> with TickerProviderStateMixin {
     );
   }
 
-  Color _getModeColor(GameMode mode) {
-    switch (mode) {
-      case GameMode.bookTrivia: return Colors.brown;
-      case GameMode.authorQuiz: return Colors.teal;
-      case GameMode.quoteChallenge: return Colors.purple;
-      case GameMode.speedRound: return Colors.amber.shade700;
-    }
+  Color _getModeColor(dynamic mode) {
+  final value = mode.toString();
+
+  if (value.contains('bookTrivia')) {
+    return Colors.blue;
+  }
+  if (value.contains('authorQuiz')) {
+    return Colors.teal;
+  }
+  if (value.contains('quoteChallenge')) {
+    return Colors.purple;
+  }
+  if (value.contains('speedRound')) {
+    return Colors.amber.shade700;
   }
 
-  Color _getDifficultyColor(Difficulty diff) {
+  return Colors.blueGrey;
+}
+
+Color _getDifficultyColor(dynamic diff) {
+  final value = diff.toString();
+
+  if (value.contains('easy')) {
+    return Colors.green;
+  }
+  if (value.contains('medium')) {
+    return Colors.orange;
+  }
+  if (value.contains('hard')) {
+    return Colors.red;
+  }
+
+  return Colors.blueGrey;
+}
     switch (diff) {
       case Difficulty.easy: return Colors.green;
       case Difficulty.medium: return Colors.orange;
